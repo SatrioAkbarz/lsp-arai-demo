@@ -370,3 +370,49 @@ footer {
     color: #fff;
     text-align: center;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-container {
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+}
