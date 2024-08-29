@@ -1,0 +1,372 @@
+/* Reset Default Browser Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menjaga jarak antara logo dan ikon sosial */
+    padding: 10px 20px; /* Tambahkan padding sesuai kebutuhan */
+    background-color: #ffffff; /* Warna latar belakang jika diinginkan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: tambahkan bayangan untuk efek kedalaman */
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Social Container */
+.social-container {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    color: #ff9100; /* Warna ikon */
+    font-size: 1.5rem;
+    margin-left: 15px; /* Jarak antara ikon */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #FFD700; /* Warna saat hover */
+}
+
+
+.logo-container img {
+    max-width: 130px;
+}
+
+/* Social Container */
+.social-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Menempatkan social-container di sebelah kanan logo */
+}
+
+.social-icon {
+    color: #FFA500;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #FFD700; /* Warna saat hover */
+}
+
+/* Header style */
+header {
+    background-color: #FFA500; /* Oranye terang */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    position: relative; /* Untuk positioning submenu */
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #E59400; /* Sedikit lebih gelap saat hover */
+}
+
+/* Style untuk submenu */
+.dropdown-menu {
+    display: none; /* Sembunyikan submenu secara default */
+    position: absolute;
+    top: 100%; /* Letakkan di bawah item menu */
+    left: 0;
+    background-color: #FFA500; /* Sama dengan background header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    z-index: 1000; /* Pastikan submenu di atas konten lainnya */
+    width: 200px; /* Lebar submenu */
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block; /* Agar area klik lebih besar */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #E59400; /* Sedikit lebih gelap saat hover */
+}
+
+/* Tampilkan submenu saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+header nav ul li a:hover {
+    background-color: #E59400; /* Sedikit lebih gelap saat hover */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('TKPK-II.png') no-repeat center center/cover; /* Ganti dengan URL gambar latar belakang Anda */
+    color: #fff;
+    height: 100vh; /* Tinggi penuh layar */
+    width: 100vw; /* Lebar penuh layar */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Pusatkan konten horizontal */
+    overflow: hidden;
+}
+
+/* Overlay untuk latar belakang */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Gelapkan latar belakang dengan overlay hitam transparan */
+    z-index: 0; /* Letakkan di belakang konten */
+}
+
+/* Konten Hero */
+.hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Konten di sebelah kiri */
+    justify-content: center;
+    max-width: 80%; /* Lebar maksimum konten, diatur agar sesuai dengan lebar hero-section */
+    padding: 20px; /* Sesuaikan padding jika perlu */
+    z-index: 1; /* Pastikan konten berada di atas latar belakang */
+    text-align: left; /* Agar teks diatur ke kiri */
+}
+
+/* Gaya Teks */
+.hero-content h1 {
+    font-size: 3.5rem; /* Ukuran font yang besar */
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInLeft 1.5s ease-out;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #FFA500; /* Oranye terang */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #E59400; /* Sedikit lebih gelap saat hover */
+    transform: scale(1.05);
+}
+
+/* Animasi */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+/* Tentang Kami Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.about-image img {
+    width: 300px; /* Sesuaikan ukuran gambar jika perlu */
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+h2, h3 {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden h3 .arrow {
+    transform: rotate(180deg); /* Putar panah untuk menunjukkan konten yang terbuka */
+}
+
+
+
+
+/* Services Section */
+.services-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    margin-bottom: 20px;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.service-item {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1em;
+}
+
+/* Contact Section */
+/* Kontak Section */
+.contact-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Maps Embed */
+.maps {
+    margin-bottom: 20px;
+}
+
+.maps iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Details */
+.contact-details {
+    font-size: 1rem;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #FFA500; /* Oranye terang */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
